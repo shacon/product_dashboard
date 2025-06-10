@@ -66,6 +66,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "django" },
+    { name = "pytest-django" },
 ]
 
 [package.dev-dependencies]
@@ -75,7 +76,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "django", specifier = ">=5.2.2" }]
+requires-dist = [
+    { name = "django", specifier = ">=5.2.2" },
+    { name = "pytest-django", specifier = ">=4.11.1" },
+]
 
 [package.metadata.requires-dev]
 dev = [
