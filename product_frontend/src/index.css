@@ -1,5 +1,4 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   /* Color palette */
   --sage-dark: #6b9080;
@@ -7,6 +6,7 @@
   --sage-light: #cce3de;
   --mint-light: #eaf4f4;
   --off-white: #f6fff8;
+  --almost-white: #fcfefd;
 
   /* Spacing */
   --spacing-xs: 4px;

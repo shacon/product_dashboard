@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       {data && data.products ? (
-        <ProductGallery products={data.products} />
+        <ProductGallery products={data.products} label="Most Reviewed" />
       ) : (
         <p>Loading data...</p>
       )}

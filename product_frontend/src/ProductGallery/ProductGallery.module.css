@@ -1,15 +1,18 @@
+.galleryWrapper {
+  padding-top: 20px;
+}
+
 .gallery {
   flex-direction: row;
   display: flex;
-  border: 2px solid black;
   justify-content: center;
   padding: 15px 20px;
   place-items: center;
   gap: 10px;
 
-  background-color: var(--mint-light);
+  background-color: var(--almost-white);
   border: 2px solid var(--sage-medium);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
 }
 
@@ -40,4 +43,13 @@ button:disabled {
   background-color: var(--sage-light);
   color: var(--sage-medium);
   cursor: not-allowed;
+}
+
+.label {
+  padding: 10px;
+  border: solid var(--sage-medium) 1px;
+  border-bottom: none;
+  width: fit-content;
+  border-radius: var(--radius-sm);
+  background-color: var(--off-white);
 }

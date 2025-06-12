@@ -6,9 +6,10 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface ProductGalleryProps {
   products: Product[];
+  label?: string;
 }
 
-function ProductGallery({ products }: ProductGalleryProps) {
+function ProductGallery({ products, label }: ProductGalleryProps) {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -25,15 +26,10 @@ function ProductGallery({ products }: ProductGalleryProps) {
   }
 
   const leftClick = () => {
-    console.log("left Clicked!");
     setCurrentPage(currentPage - 1);
   };
 
   const rightClick = () => {
-    console.log("right Clicked!");
-    console.log(currentPage >= totalPages);
-    console.log("total pages", totalPages);
-    console.log("current pages", currentPage);
     setCurrentPage(currentPage + 1);
   };
 
@@ -48,18 +44,22 @@ function ProductGallery({ products }: ProductGalleryProps) {
   };
 
   return (
-    <div className={styles.gallery}>
-      <button onClick={leftClick} disabled={disabled("left")}>
-        <ChevronLeft size={50} />
-      </button>
-      <div className={styles.productWrapper}>
-        {currentProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+    <div className={styles.galleryWrapper}>
+      {/* ADD if label */}
+      <div className={styles.label}>{label}</div>
+      <div className={styles.gallery}>
+        <button onClick={leftClick} disabled={disabled("left")}>
+          <ChevronLeft size={50} />
+        </button>
+        <div className={styles.productWrapper}>
+          {currentProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+        <button onClick={rightClick} disabled={disabled("right")}>
+          <ChevronRight size={50} />
+        </button>
       </div>
-      <button onClick={rightClick} disabled={disabled("right")}>
-        <ChevronRight size={50} />
-      </button>
     </div>
   );
 }
