@@ -1,4 +1,35 @@
 .card {
   height: 200px;
-  width: 100px;
+  width: 160px;
+  border: 1mm solid grey;
+  border-radius: 2mm;
+  padding: 1mm;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+}
+
+.cardSection {
+  flex: 1;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 2px;
+  }
+}
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }

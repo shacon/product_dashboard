@@ -1,19 +1,8 @@
 import { useState, useEffect } from "react";
-import ProductCard from "./ProductCard/ProductCard.tsx";
+// import ProductCard from "./ProductCard/ProductCard.tsx";
+import ProductGallery from "./ProductGallery/ProductGallery.tsx";
 import "./App.css";
-
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  total_reviews: number;
-  rating: string | null;
-  image_url: string | null;
-}
-
-interface ProductApiResponse {
-  products: Product[];
-}
+import type { ProductApiResponse } from "./types.ts";
 
 function App() {
   const [data, setData] = useState<ProductApiResponse | null>(null);
@@ -30,13 +19,7 @@ function App() {
   return (
     <>
       {data && data.products ? (
-        <ul>
-          {data.products.map((product) => (
-            <div key={product.id}>
-              <ProductCard name={product.name}></ProductCard>
-            </div>
-          ))}
-        </ul>
+        <ProductGallery products={data.products} />
       ) : (
         <p>Loading data...</p>
       )}
