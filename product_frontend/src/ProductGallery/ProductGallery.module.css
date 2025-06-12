@@ -1,0 +1,14 @@
+.gallery {
+  flex-direction: row;
+  display: flex;
+  border: 2px solid black;
+  width: fit-content;
+  justify-content: center;
+  padding: 15px 60px;
+  place-items: center;
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+}
