@@ -94,7 +94,11 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
     <div className={styles.galleryWrapper}>
       <div className={styles.label}>{label}</div>
       <div className={styles.gallery}>
-        <button onClick={leftClick} disabled={disabled("left")}>
+        <button
+          onClick={leftClick}
+          disabled={disabled("left")}
+          aria-label="Previous page"
+        >
           <ChevronLeft size={50} />
         </button>
         <div className={styles.productWrapper}>
@@ -102,7 +106,11 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        <button onClick={rightClick} disabled={disabled("right")}>
+        <button
+          onClick={rightClick}
+          disabled={disabled("right")}
+          aria-label="Next page"
+        >
           <ChevronRight size={50} />
         </button>
       </div>
