@@ -26,7 +26,7 @@ function ProductCard({ product }: ProductCardProps) {
           />
         )}
       </div>
-      <div className={styles.cardSection}>
+      <div className={`${styles.cardSection} ${styles.middleSection}`}>
         <p>{product.name}</p>
         <p>Price: {product.price}</p>
       </div>

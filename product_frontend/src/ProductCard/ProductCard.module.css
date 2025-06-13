@@ -45,3 +45,7 @@
 
   border: 2px solid var(--sage-light);
 }
+
+.middleSection {
+  font-weight: 600;
+}

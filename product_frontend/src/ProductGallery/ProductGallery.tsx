@@ -29,7 +29,7 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
   }, []);
 
   const itemsPerPage = () => {
-    if (windowWidth > 1024) {
+    if (windowWidth > 1115) {
       return 5;
     } else if (windowWidth < 768) {
       return 1;
