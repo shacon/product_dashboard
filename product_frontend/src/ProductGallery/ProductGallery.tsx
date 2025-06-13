@@ -1,21 +1,46 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import styles from "./ProductGallery.module.css";
-import type { Product } from "../types";
+// import type { Product } from "../types";
 import ProductCard from "../ProductCard/ProductCard";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import { useProductData } from "../hooks/useProductData";
 
 interface ProductGalleryProps {
-  products: Product[];
+  galleryType: "most_reviewed" | "best_rated";
   label?: string;
 }
 
-function ProductGallery({ products, label }: ProductGalleryProps) {
+function ProductGallery({ galleryType, label }: ProductGalleryProps) {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 5;
-  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const { products, loading, error } = useProductData(galleryType);
 
-  const startIndex = currentPage * 5;
-  const endIndex = startIndex + 5;
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const itemsPerPage = () => {
+    if (windowWidth > 1024) {
+      return 5;
+    } else if (windowWidth < 768) {
+      return 1;
+    }
+    return 3;
+  };
+
+  const totalPages = Math.ceil(products.length / itemsPerPage());
+
+  const startIndex = currentPage * itemsPerPage();
+  const endIndex = startIndex + itemsPerPage();
   const currentProducts = useMemo(
     () => products.slice(startIndex, endIndex),
     [products, startIndex, endIndex]
@@ -45,7 +70,6 @@ function ProductGallery({ products, label }: ProductGalleryProps) {
 
   return (
     <div className={styles.galleryWrapper}>
-      {/* ADD if label */}
       <div className={styles.label}>{label}</div>
       <div className={styles.gallery}>
         <button onClick={leftClick} disabled={disabled("left")}>

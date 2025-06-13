@@ -24,3 +24,9 @@
   --shadow-sm: 0 1px 3px rgba(107, 144, 128, 0.1);
   --shadow-md: 0 4px 12px rgba(107, 144, 128, 0.15);
 }
+
+body {
+  color: #1a251f;
+  margin: 0;
+  padding: 0;
+}
