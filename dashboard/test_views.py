@@ -43,4 +43,3 @@ def test_products_endpoint_returns_most_reviewed_products(client, test_products)
     assert len(products) == 2
     assert products[0]['total_reviews'] == 100
     assert products[1]['total_reviews'] == 51
-

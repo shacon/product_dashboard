@@ -1,21 +1,19 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from .models import Product
 
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the dashboard index.")
-
+DEFAULT_PRODUCT_LIMIT = 15
 
 def products(request):
   queryset = Product.objects.all()
   if request.GET.get('best_rated') is not None:
     queryset = queryset.filter(rating__isnull=False).order_by('-rating')
   elif request.GET.get('most_reviewed') is not None:
-    queryset = queryset.filter(total_reviews__isnull=False).order_by('-total_reviews')
+    queryset = queryset.exclude(total_reviews=0).order_by('-total_reviews')
+
   limit = request.GET.get('limit')
-  if limit:
-    queryset = queryset[:int(limit)]
+  result_limit = int(limit) if limit else DEFAULT_PRODUCT_LIMIT
+  queryset = queryset[:result_limit]
 
   products_list = []
   for product in queryset:

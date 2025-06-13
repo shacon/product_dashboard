@@ -1,0 +1,332 @@
+[
+  {
+    "model": "dashboard.product",
+    "pk": 1,
+    "fields": {
+      "name": "Wireless Bluetooth Headphones",
+      "price": "79.99",
+      "total_reviews": 142,
+      "rating": "4.5",
+      "image_url": "/static/images/products/product1.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 2,
+    "fields": {
+      "name": "Bluetooth Speaker",
+      "price": "49.99",
+      "total_reviews": 89,
+      "rating": "4.2",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 3,
+    "fields": {
+      "name": "USB-C Fast Charger",
+      "price": "29.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": "/static/images/products/product3.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 4,
+    "fields": {
+      "name": "Wireless Mouse",
+      "price": "39.99",
+      "total_reviews": 256,
+      "rating": "4.8",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 5,
+    "fields": {
+      "name": "Mechanical Keyboard",
+      "price": "129.99",
+      "total_reviews": 341,
+      "rating": "4.7",
+      "image_url": "/static/images/products/product1.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 6,
+    "fields": {
+      "name": "4K Webcam",
+      "price": "89.99",
+      "total_reviews": 67,
+      "rating": "3.9",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 7,
+    "fields": {
+      "name": "Phone Stand",
+      "price": "19.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 8,
+    "fields": {
+      "name": "Laptop Cooling Pad",
+      "price": "45.99",
+      "total_reviews": 123,
+      "rating": "4.1",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 9,
+    "fields": {
+      "name": "Gaming Headset",
+      "price": "99.99",
+      "total_reviews": 445,
+      "rating": "4.6",
+      "image_url": "/static/images/products/product1.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 10,
+    "fields": {
+      "name": "Portable SSD 1TB",
+      "price": "159.99",
+      "total_reviews": 189,
+      "rating": "4.9",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 11,
+    "fields": {
+      "name": "Wireless Earbuds",
+      "price": "69.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": "/static/images/products/product3.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 12,
+    "fields": {
+      "name": "Monitor Stand",
+      "price": "34.99",
+      "total_reviews": 78,
+      "rating": "4.3",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 13,
+    "fields": {
+      "name": "USB Hub 7-Port",
+      "price": "24.99",
+      "total_reviews": 203,
+      "rating": "4.0",
+      "image_url": "/static/images/products/product1.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 14,
+    "fields": {
+      "name": "Tablet Stylus",
+      "price": "15.99",
+      "total_reviews": 156,
+      "rating": "3.8",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 15,
+    "fields": {
+      "name": "Desk Lamp LED",
+      "price": "42.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": "/static/images/products/product3.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 16,
+    "fields": {
+      "name": "External Hard Drive 2TB",
+      "price": "89.99",
+      "total_reviews": 567,
+      "rating": "4.4",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 17,
+    "fields": {
+      "name": "Wireless Charging Pad",
+      "price": "27.99",
+      "total_reviews": 289,
+      "rating": "4.2",
+      "image_url": "/static/images/products/product1.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 18,
+    "fields": {
+      "name": "HDMI Cable 10ft",
+      "price": "12.99",
+      "total_reviews": 445,
+      "rating": "4.7",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 19,
+    "fields": {
+      "name": "Screen Cleaner Kit",
+      "price": "9.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 20,
+    "fields": {
+      "name": "Bluetooth Adapter",
+      "price": "18.99",
+      "total_reviews": 134,
+      "rating": "3.7",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 21,
+    "fields": {
+      "name": "Cable Management Box",
+      "price": "22.99",
+      "total_reviews": 98,
+      "rating": "4.1",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 22,
+    "fields": {
+      "name": "Power Bank 20000mAh",
+      "price": "55.99",
+      "total_reviews": 723,
+      "rating": "4.8",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 23,
+    "fields": {
+      "name": "Microphone Pop Filter",
+      "price": "8.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": "/static/images/products/product3.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 24,
+    "fields": {
+      "name": "Graphics Tablet",
+      "price": "149.99",
+      "total_reviews": 234,
+      "rating": "4.5",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 25,
+    "fields": {
+      "name": "Smart Watch Band",
+      "price": "16.99",
+      "total_reviews": 167,
+      "rating": "4.0",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 26,
+    "fields": {
+      "name": "Laptop Privacy Screen",
+      "price": "31.99",
+      "total_reviews": 89,
+      "rating": "3.9",
+      "image_url": "/static/images/products/product2.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 27,
+    "fields": {
+      "name": "Surge Protector",
+      "price": "28.99",
+      "total_reviews": 0,
+      "rating": "0",
+      "image_url": "/static/images/products/product3.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 28,
+    "fields": {
+      "name": "Car Phone Mount",
+      "price": "21.99",
+      "total_reviews": 356,
+      "rating": "4.3",
+      "image_url": "/static/images/products/product4.jpeg"
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 29,
+    "fields": {
+      "name": "Webcam Cover Slides",
+      "price": "5.99",
+      "total_reviews": 512,
+      "rating": "4.1",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "dashboard.product",
+    "pk": 30,
+    "fields": {
+      "name": "Ethernet Cable 25ft",
+      "price": "19.99",
+      "total_reviews": 298,
+      "rating": "4.6",
+      "image_url": ""
+    }
+  }
+]

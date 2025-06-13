@@ -5,6 +5,8 @@ interface ProductCardProps {
   product: Product;
 }
 
+const API_BASE_URL = "http://localhost:8000";
+
 function ProductCard({ product }: ProductCardProps) {
   if (!product) {
     return <div>Loading product...</div>;
@@ -14,7 +16,7 @@ function ProductCard({ product }: ProductCardProps) {
       <div className={`${styles.cardSection} ${styles.imageSection}`}>
         {product.image_url ? (
           <img
-            src={product.image_url}
+            src={`${API_BASE_URL}${product.image_url}`}
             alt={product.name}
             className={styles.productImage}
           />

@@ -6,6 +6,7 @@ Running Locally
 3. Go into the main project directory `cd product-dashboard`
 4. Install dependencies and create virutal env with `uv sync`
 5. Activate the virtual environment with `source .venv/bin/activate` (optional - can otherwise run commands with uv which will run within virtualenv)
+6. Load fixture data `uv run python manage.py loaddata products`
 
 Make Migrations
 `uv run python manage.py makemigrations`
