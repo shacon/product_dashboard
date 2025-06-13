@@ -1,6 +1,16 @@
 import { useState, useEffect } from "react";
 
-export const useProductData = (type: "most_reviewed" | "best_rated") => {
+import type { Product } from "../types";
+
+interface UseProductDataReturn {
+  products: Product[];
+  loading: boolean;
+  error: string | null;
+}
+
+export const useProductData = (
+  type: "most_reviewed" | "best_rated"
+): UseProductDataReturn => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

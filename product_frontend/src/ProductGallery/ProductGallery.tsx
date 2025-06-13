@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect } from "react";
-import styles from "./ProductGallery.module.css";
-// import type { Product } from "../types";
-import ProductCard from "../ProductCard/ProductCard";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+
 import { useProductData } from "../hooks/useProductData";
+import ProductCard from "../ProductCard/ProductCard";
+import styles from "./ProductGallery.module.css";
 
 interface ProductGalleryProps {
   galleryType: "most_reviewed" | "best_rated";
@@ -29,11 +29,8 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
   }, []);
 
   const itemsPerPage = () => {
-    if (windowWidth > 1115) {
-      return 5;
-    } else if (windowWidth < 768) {
-      return 1;
-    }
+    if (windowWidth > 1115) return 5;
+    if (windowWidth < 768) return 1;
     return 3;
   };
 
@@ -45,10 +42,6 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
     () => products.slice(startIndex, endIndex),
     [products, startIndex, endIndex]
   );
-
-  if (!products) {
-    return <div>Loading product...</div>;
-  }
 
   const leftClick = () => {
     setCurrentPage(currentPage - 1);
@@ -67,6 +60,35 @@ function ProductGallery({ galleryType, label }: ProductGalleryProps) {
     }
     return false;
   };
+
+  if (loading) {
+    return (
+      <div className={styles.galleryWrapper}>
+        <div className={styles.label}>{label}</div>
+        <div className={styles.loading}>Loading products...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.galleryWrapper}>
+        <div className={styles.label}>{label}</div>
+        <div className={styles.error}>
+          Failed to load products. Please try again later.
+        </div>
+      </div>
+    );
+  }
+
+  if (!loading && products.length === 0) {
+    return (
+      <div className={styles.galleryWrapper}>
+        <div className={styles.label}>{label}</div>
+        <div className={styles.empty}>No products found.</div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.galleryWrapper}>
