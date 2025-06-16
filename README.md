@@ -1,13 +1,23 @@
 
 ## Overview
 
-### Backend
+A responsive web app that displays products. Currently two product galleries are displayed on the dashboard:
+1. Best rated - products with highest ratings
+2. Most reviewed - products with the highest number of reviews
+
+### Backend (Django)
 
 One model - Product
 
-One endpoint with different options that will filter based on rating or reviews
+One endpoint with different options that will filter based on rating or reviews:
 
-### Frontend
+`GET /api/products/`
+- `filter_type`: `best_rated` | `most_reviewed`
+- `limit`: Number (1-100, default: 15)
+
+Example: `GET /api/products/?filter_type=best_rated&limit=10`
+
+### Frontend (React/Typescript)
 
 The app is made up of the folllowing main components:
 - [Dasboard](product_frontend/src/ProductDashboard/ProductDashboard.tsx)
@@ -51,7 +61,7 @@ Running Backend Tests
 `uv run pytest` from product_dashboard
 
 Running Frontend Tests
-*Be sure to be within the product_frontend director*
+*Be sure to be within the product_frontend directory*
 `npm test`
 
 
@@ -60,5 +70,12 @@ Running Frontend Tests
 - Review counts are an integer count and 0 indicates no reviews
 - Current implementation assumes local backend server will be on port 8000 - if using a different port edit API_BASE_URL in [ProductCard](product_frontend/src/ProductCard/ProductCard.tsx) to map to the appropriate port
 - Best rated and most reviewed will limit data to 15 as a default but the endpoint accepts an optional limit param which can alter the number of results
+
+
+## Responsive Design
+
+Gallery will show a number of products based on screen size - 5 for desktop/large 3 for tablet and 1 for mobile
+
+Screenshots:
 
 

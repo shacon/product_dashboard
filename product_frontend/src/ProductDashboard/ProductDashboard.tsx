@@ -1,7 +1,7 @@
 import ProductGallery from "../ProductGallery/ProductGallery";
 import styles from "./ProductDashboard.module.css";
 
-function App() {
+function ProductDashabord() {
   return (
     <div className={styles.dashboard}>
       <div className={styles.header}>
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default ProductDashabord;
