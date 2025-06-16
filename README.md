@@ -83,5 +83,6 @@ Screenshots:
 
 <img width="445" alt="Screenshot 2025-06-16 at 10 49 28 AM" src="https://github.com/user-attachments/assets/56aa8343-61f6-448e-b60e-c04dc22f24fe" />
 
+<img width="307" alt="Screenshot 2025-06-16 at 11 16 56 AM" src="https://github.com/user-attachments/assets/db084d27-a6db-4b46-9807-02017ec71b7c" />
 
-<img width="366" alt="Screenshot 2025-06-16 at 10 49 17 AM" src="https://github.com/user-attachments/assets/1e1e258d-8342-41e7-82ac-2910cdb2620a" />
+
