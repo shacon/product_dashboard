@@ -78,10 +78,11 @@ Gallery will show a number of products based on screen size - 5 for desktop/larg
 
 Screenshots:
 
-<img width="1351" alt="Screenshot 2025-06-16 at 10 49 03 AM" src="https://github.com/user-attachments/assets/528fe01b-e5f5-42b6-b974-5ff0b63a7ecb" />
+<img width="1375" alt="Screenshot 2025-06-16 at 11 20 22 AM" src="https://github.com/user-attachments/assets/835f989c-c0de-46d5-b970-59548d83c221" />
 
 
-<img width="445" alt="Screenshot 2025-06-16 at 10 49 28 AM" src="https://github.com/user-attachments/assets/56aa8343-61f6-448e-b60e-c04dc22f24fe" />
+<img width="450" alt="Screenshot 2025-06-16 at 11 21 10 AM" src="https://github.com/user-attachments/assets/12d5e90a-72a7-4209-bda4-0d4111602794" />
+
 
 <img width="307" alt="Screenshot 2025-06-16 at 11 16 56 AM" src="https://github.com/user-attachments/assets/db084d27-a6db-4b46-9807-02017ec71b7c" />
 
