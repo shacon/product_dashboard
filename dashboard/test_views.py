@@ -13,10 +13,8 @@ def test_products():
 
 @pytest.mark.django_db
 def test_products_endpoint_returns_best_rated_products(client, test_products):
-    endpoint = reverse('products')
-
     response = client.get(reverse('products'), {
-      'best_rated': '',
+      'filter_type': 'best_rated',
       'limit': 2
     })
 
@@ -30,10 +28,8 @@ def test_products_endpoint_returns_best_rated_products(client, test_products):
 
 @pytest.mark.django_db
 def test_products_endpoint_returns_most_reviewed_products(client, test_products):
-    endpoint = reverse('products')
-
     response = client.get(reverse('products'), {
-      'most_reviewed': '',
+      'filter_type': 'most_reviewed',
       'limit': 2
     })
 

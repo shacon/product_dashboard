@@ -17,7 +17,7 @@ export const useProductData = (
 
   useEffect(() => {
     const params = new URLSearchParams({
-      [type]: "",
+      filter_type: type,
       limit: "15",
     });
 

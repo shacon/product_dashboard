@@ -5,14 +5,18 @@ from .models import Product
 DEFAULT_PRODUCT_LIMIT = 15
 
 def products(request):
+  product_type = request.GET.get('filter_type')
   queryset = Product.objects.all()
-  if request.GET.get('best_rated') is not None:
+  if product_type == 'best_rated':
     queryset = queryset.filter(rating__isnull=False).order_by('-rating')
-  elif request.GET.get('most_reviewed') is not None:
+  elif product_type == 'most_reviewed':
     queryset = queryset.exclude(total_reviews=0).order_by('-total_reviews')
 
   limit = request.GET.get('limit')
-  result_limit = int(limit) if limit else DEFAULT_PRODUCT_LIMIT
+  try:
+    result_limit = max(1, min(int(limit), 100)) if limit else DEFAULT_PRODUCT_LIMIT
+  except ValueError:
+      result_limit = DEFAULT_PRODUCT_LIMIT
   queryset = queryset[:result_limit]
 
   products_list = []
