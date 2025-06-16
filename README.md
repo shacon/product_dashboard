@@ -7,6 +7,8 @@ A responsive web app that displays products. Currently two product galleries are
 
 ### Backend (Django)
 
+Django project with `product_backend/` for configuration and `dashboard/` app for the products API.
+
 One model - Product
 
 One endpoint with different options that will filter based on rating or reviews:
